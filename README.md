@@ -6,8 +6,8 @@ Privacy policies and terms of service for my iOS apps.
 
 Once GitHub Pages is enabled, policies will be available at:
 - **Main page**: `https://marianyakubets.github.io/app-policies/`
-- **QuickTip Privacy Policy**: `https://marianyakubets.github.io/app-policies/quicktip/privacy-policy.html`
-- **QuickTip Terms of Service**: `https://marianyakubets.github.io/app-policies/quicktip/terms-of-service.html`
+- **Tip Calculator + Privacy Policy**: `https://marianyakubets.github.io/app-policies/tip-calculator-plus/privacy-policy.html`
+- **Tip Calculator + Terms of Service**: `https://marianyakubets.github.io/app-policies/tip-calculator-plus/terms-of-service.html`
 
 ## Setup GitHub Pages
 
@@ -20,15 +20,15 @@ Once GitHub Pages is enabled, policies will be available at:
 
 ## Apps
 
-### QuickTip
-- `/quicktip/privacy-policy.html` - Privacy Policy
-- `/quicktip/terms-of-service.html` - Terms of Service
-- `/quicktip/index.html` - App landing page
+### Tip Calculator +
+- `/tip-calculator-plus/privacy-policy.html` - Privacy Policy
+- `/tip-calculator-plus/terms-of-service.html` - Terms of Service
+- `/tip-calculator-plus/index.html` - App landing page
 
 ## Adding a New App
 
 1. Create a new folder with the app name (lowercase, no spaces)
-2. Copy the structure from `quicktip/`:
+2. Copy the structure from `tip-calculator-plus/`:
    - `index.html` - App landing page
    - `privacy-policy.html` - Privacy policy
    - `terms-of-service.html` - Terms of service
@@ -46,7 +46,7 @@ app-policies/
 ├── README.md
 ├── index.html          # Main landing page
 ├── style.css           # Shared styles
-└── quicktip/
+└── tip-calculator-plus/
     ├── index.html
     ├── privacy-policy.html
     └── terms-of-service.html
