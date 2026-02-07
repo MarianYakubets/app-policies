@@ -150,3 +150,369 @@ footer {
     font-size: 0.875rem;
     margin-right: 16px;
 }
+
+/* Tiply modern theme (scoped to Tiply pages only) */
+.tiply-modern {
+    position: relative;
+    max-width: 880px;
+    padding-top: 28px;
+    background:
+        radial-gradient(circle at 8% -5%, rgba(10, 132, 255, 0.2), transparent 34%),
+        radial-gradient(circle at 92% 0%, rgba(52, 199, 89, 0.14), transparent 36%),
+        var(--background);
+}
+
+.tiply-modern .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.tiply-modern .back-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.tiply-modern .back-link:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--primary-color) 34%, var(--border-color));
+}
+
+.tiply-modern header {
+    text-align: left;
+    border-bottom: 0;
+    margin-bottom: 24px;
+    padding: clamp(24px, 5vw, 36px);
+    border-radius: 22px;
+    border: 1px solid var(--border-color);
+    background: var(--card-background);
+    background:
+        linear-gradient(125deg, color-mix(in srgb, var(--primary-color) 14%, transparent), transparent 48%),
+        color-mix(in srgb, var(--card-background) 88%, transparent);
+    box-shadow: 0 1px 0 rgba(60, 60, 67, 0.08), 0 16px 36px rgba(15, 23, 42, 0.08);
+}
+
+.tiply-modern header h1 {
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.tiply-modern .subtitle {
+    margin-bottom: 0;
+    font-size: 1.06rem;
+}
+
+.tiply-modern main {
+    display: grid;
+    gap: 24px;
+}
+
+.tiply-modern .lead {
+    margin-bottom: 0;
+    font-size: 1.04rem;
+    color: var(--secondary-text);
+}
+
+.tiply-modern .app-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.tiply-modern .app-list li {
+    background-color: var(--card-background);
+    background:
+        linear-gradient(165deg, color-mix(in srgb, var(--card-background) 92%, transparent), color-mix(in srgb, var(--background) 88%, transparent));
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 0;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tiply-modern .app-list li:hover {
+    transform: translateX(2px);
+    border-color: color-mix(in srgb, var(--primary-color) 34%, var(--border-color));
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+.tiply-modern .app-list li a {
+    display: block;
+    font-size: 1.02rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.tiply-modern .app-list li p {
+    margin-bottom: 0;
+    color: var(--secondary-text);
+}
+
+.tiply-modern .legal-content {
+    background-color: var(--card-background);
+    background:
+        linear-gradient(165deg, color-mix(in srgb, var(--card-background) 92%, transparent), color-mix(in srgb, var(--background) 90%, transparent));
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    padding: clamp(18px, 4vw, 28px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+.tiply-modern .legal-content h2 {
+    margin-top: 28px;
+    margin-bottom: 10px;
+    font-size: 1.28rem;
+    letter-spacing: -0.01em;
+}
+
+.tiply-modern .legal-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.tiply-modern .legal-content h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1.06rem;
+}
+
+.tiply-modern .legal-content p {
+    margin-bottom: 14px;
+}
+
+.tiply-modern .legal-content ul,
+.tiply-modern .legal-content ol {
+    margin-bottom: 14px;
+}
+
+.tiply-modern .contact-info {
+    margin-top: 20px;
+    margin-bottom: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background-color: color-mix(in srgb, var(--background) 55%, var(--card-background));
+}
+
+.tiply-modern footer {
+    margin-top: 28px;
+}
+
+@media (max-width: 680px) {
+    .tiply-modern {
+        padding-top: 20px;
+    }
+
+    .tiply-modern .top-bar {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .tiply-modern .back-link {
+        width: 100%;
+    }
+
+    .tiply-modern .legal-content {
+        border-radius: 14px;
+    }
+}
+
+/* Tiply About page extensions */
+.tiply-about .language-switcher {
+    margin-left: auto;
+}
+
+.tiply-about .language-switcher select {
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background);
+    background-color: color-mix(in srgb, var(--card-background) 82%, transparent);
+    color: var(--text-color);
+    cursor: pointer;
+    min-width: 136px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tiply-about .language-switcher select:focus-visible {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.25);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 25%, transparent);
+}
+
+.tiply-about .hero-tagline {
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    color: var(--secondary-text);
+    margin-top: 14px;
+    margin-bottom: 0;
+    max-width: 44ch;
+}
+
+.tiply-about main {
+    gap: 30px;
+}
+
+.tiply-about .feature-section h2,
+.tiply-about .links-section h2 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+}
+
+.tiply-about .features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.tiply-about .feature-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card-background);
+    background: linear-gradient(
+        165deg,
+        color-mix(in srgb, var(--card-background) 92%, transparent),
+        color-mix(in srgb, var(--background) 88%, transparent)
+    );
+    border: 1px solid var(--border-color);
+    border: 1px solid color-mix(in srgb, var(--border-color) 72%, transparent);
+    border-radius: 16px;
+    padding: 20px;
+    min-height: 174px;
+    transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.tiply-about .feature-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--primary-color) 36%, var(--border-color));
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 12px 24px color-mix(in srgb, var(--text-color) 8%, transparent);
+}
+
+.tiply-about .feature-card .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    background: color-mix(in srgb, var(--primary-color) 12%, transparent);
+}
+
+.tiply-about .feature-card h3 {
+    margin-top: 0;
+    margin-bottom: 7px;
+    line-height: 1.25;
+}
+
+.tiply-about .feature-card p {
+    color: var(--secondary-text);
+    font-size: 0.93rem;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.tiply-about .cta-section {
+    text-align: center;
+    margin: 0;
+    padding: 26px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    border: 1px solid color-mix(in srgb, var(--border-color) 65%, transparent);
+    background: var(--card-background);
+    background:
+        radial-gradient(circle at 50% -90%, color-mix(in srgb, var(--primary-color) 22%, transparent), transparent 68%),
+        color-mix(in srgb, var(--card-background) 88%, transparent);
+}
+
+.tiply-about .app-store-badge {
+    display: inline-block;
+    margin: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.tiply-about .app-store-badge:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.tiply-about .app-store-badge img {
+    height: 44px;
+}
+
+.tiply-about .links-section {
+    margin-top: 0;
+}
+
+.tiply-about .links-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tiply-about .links-section li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: var(--card-background);
+    background-color: color-mix(in srgb, var(--card-background) 92%, transparent);
+    border: 1px solid var(--border-color);
+    border: 1px solid color-mix(in srgb, var(--border-color) 64%, transparent);
+    border-radius: 14px;
+    padding: 15px 18px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.tiply-about .links-section li:hover {
+    transform: translateX(2px);
+    border-color: color-mix(in srgb, var(--primary-color) 34%, var(--border-color));
+}
+
+.tiply-about .links-section li a {
+    font-weight: 550;
+    flex: 1;
+}
+
+.tiply-about .links-section li::after {
+    content: "→";
+    color: var(--secondary-text);
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .tiply-about .language-switcher {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .tiply-about .language-switcher select {
+        width: 100%;
+    }
+
+    .tiply-about .features {
+        grid-template-columns: 1fr;
+    }
+
+    .tiply-about .feature-card {
+        min-height: 0;
+    }
+}

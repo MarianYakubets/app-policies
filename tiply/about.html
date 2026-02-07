@@ -5,108 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiply: Tip Calculator</title>
     <link rel="stylesheet" href="../style.css">
-    <style>
-        .language-switcher {
-            text-align: right;
-            margin-bottom: 12px;
-        }
-        .language-switcher select {
-            font-family: inherit;
-            font-size: 0.875rem;
-            padding: 6px 10px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            background-color: var(--card-background);
-            color: var(--text-color);
-            cursor: pointer;
-        }
-        .hero-tagline {
-            font-size: 1.15rem;
-            color: var(--secondary-text);
-            margin-top: 8px;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 24px;
-            margin-bottom: 32px;
-        }
-        @media (max-width: 500px) {
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-        .feature-card {
-            background-color: var(--card-background);
-            border-radius: 12px;
-            padding: 20px;
-        }
-        .feature-card .icon {
-            font-size: 1.75rem;
-            margin-bottom: 8px;
-        }
-        .feature-card h3 {
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
-        .feature-card p {
-            color: var(--secondary-text);
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-        .app-store-badge {
-            display: inline-block;
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        .app-store-badge img {
-            height: 44px;
-        }
-        .cta-section {
-            text-align: center;
-            margin: 32px 0;
-        }
-        .links-section {
-            margin-top: 32px;
-        }
-        .links-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .links-section li {
-            background-color: var(--card-background);
-            border-radius: 12px;
-            padding: 16px 20px;
-            margin-bottom: 12px;
-        }
-        .links-section li a {
-            font-weight: 500;
-        }
-    </style>
 </head>
-<body>
-    <div class="language-switcher">
-        <select id="lang-select" aria-label="Language">
-            <option value="de">Deutsch</option>
-            <option value="en" selected>English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="it">Italiano</option>
-            <option value="ja">日本語</option>
-            <option value="ko">한국어</option>
-            <option value="nl">Nederlands</option>
-            <option value="pl">Polski</option>
-            <option value="pt">Português</option>
-            <option value="ro">Română</option>
-            <option value="th">ไทย</option>
-            <option value="tr">Türkçe</option>
-            <option value="uk">Українська</option>
-            <option value="vi">Tiếng Việt</option>
-        </select>
-    </div>
+<body class="tiply-modern tiply-about">
+    <div class="top-bar">
+        <a href="index.html" class="back-link" data-i18n="back">&larr; Back to Tiply: Tip Calculator</a>
 
-    <a href="index.html" class="back-link" data-i18n="back">&larr; Back to Tiply: Tip Calculator</a>
+        <div class="language-switcher">
+            <select id="lang-select" aria-label="Language">
+                <option value="de">Deutsch</option>
+                <option value="en" selected>English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="nl">Nederlands</option>
+                <option value="pl">Polski</option>
+                <option value="pt">Português</option>
+                <option value="ro">Română</option>
+                <option value="th">ไทย</option>
+                <option value="tr">Türkçe</option>
+                <option value="uk">Українська</option>
+                <option value="vi">Tiếng Việt</option>
+            </select>
+        </div>
+    </div>
 
     <header>
         <h1>Tiply</h1>
@@ -115,44 +38,46 @@
     </header>
 
     <main>
-        <h2 data-i18n="featuresTitle">Features</h2>
-        <div class="features">
-            <div class="feature-card">
-                <div class="icon">💰</div>
-                <h3 data-i18n="f1Title">Quick Tip Calculation</h3>
-                <p data-i18n="f1Desc">Enter your bill, pick a tip percentage, and get results instantly. No fuss.</p>
+        <section class="feature-section">
+            <h2 data-i18n="featuresTitle">Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">💰</div>
+                    <h3 data-i18n="f1Title">Quick Tip Calculation</h3>
+                    <p data-i18n="f1Desc">Enter your bill, pick a tip percentage, and get results instantly. No fuss.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">👥</div>
+                    <h3 data-i18n="f2Title">Bill Splitting</h3>
+                    <p data-i18n="f2Desc">Split the bill equally or customize amounts per person.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⌚</div>
+                    <h3 data-i18n="f3Title">Apple Watch App</h3>
+                    <p data-i18n="f3Desc">Calculate tips right from your wrist. Fast and convenient.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📱</div>
+                    <h3 data-i18n="f4Title">Home Screen Widget</h3>
+                    <p data-i18n="f4Desc">Your last tip calculation, always one glance away on your Home Screen.</p>
+                </div>
             </div>
-            <div class="feature-card">
-                <div class="icon">👥</div>
-                <h3 data-i18n="f2Title">Bill Splitting</h3>
-                <p data-i18n="f2Desc">Split the bill equally or customize amounts per person.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">⌚</div>
-                <h3 data-i18n="f3Title">Apple Watch App</h3>
-                <p data-i18n="f3Desc">Calculate tips right from your wrist. Fast and convenient.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">📱</div>
-                <h3 data-i18n="f4Title">Home Screen Widget</h3>
-                <p data-i18n="f4Desc">Your last tip calculation, always one glance away on your Home Screen.</p>
-            </div>
-        </div>
+        </section>
 
-        <div class="cta-section">
+        <section class="cta-section">
             <a class="app-store-badge" href="https://apps.apple.com/us/app/tiply-tip-calculator/id6756780726" data-i18n-aria="downloadAria" aria-label="Download on the App Store">
                 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
             </a>
-        </div>
+        </section>
 
-        <div class="links-section">
+        <section class="links-section">
             <h2 data-i18n="moreInfo">More Information</h2>
             <ul>
                 <li><a href="support.html" data-i18n="support">Support & FAQ</a></li>
                 <li><a href="privacy-policy.html" data-i18n="privacy">Privacy Policy</a></li>
                 <li><a href="terms-of-service.html" data-i18n="terms">Terms of Service</a></li>
             </ul>
-        </div>
+        </section>
     </main>
 
     <footer>
