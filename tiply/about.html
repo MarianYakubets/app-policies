@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiply: Tip Calculator</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .language-switcher {
+            text-align: right;
+            margin-bottom: 12px;
+        }
+        .language-switcher select {
+            font-family: inherit;
+            font-size: 0.875rem;
+            padding: 6px 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-background);
+            color: var(--text-color);
+            cursor: pointer;
+        }
+        .hero-tagline {
+            font-size: 1.15rem;
+            color: var(--secondary-text);
+            margin-top: 8px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+        @media (max-width: 500px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+        .feature-card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .feature-card .icon {
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .app-store-badge img {
+            height: 44px;
+        }
+        .cta-section {
+            text-align: center;
+            margin: 32px 0;
+        }
+        .links-section {
+            margin-top: 32px;
+        }
+        .links-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .links-section li {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+        }
+        .links-section li a {
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <select id="lang-select" aria-label="Language">
+            <option value="de">Deutsch</option>
+            <option value="en" selected>English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="nl">Nederlands</option>
+            <option value="pl">Polski</option>
+            <option value="pt">Português</option>
+            <option value="ro">Română</option>
+            <option value="th">ไทย</option>
+            <option value="tr">Türkçe</option>
+            <option value="uk">Українська</option>
+            <option value="vi">Tiếng Việt</option>
+        </select>
+    </div>
+
+    <a href="index.html" class="back-link" data-i18n="back">&larr; Back to Tiply: Tip Calculator</a>
+
+    <header>
+        <h1>Tiply</h1>
+        <p class="subtitle" data-i18n="subtitle">Tip Calculator</p>
+        <p class="hero-tagline" data-i18n="tagline">Calculate tips and split bills in seconds.</p>
+    </header>
+
+    <main>
+        <h2 data-i18n="featuresTitle">Features</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">💰</div>
+                <h3 data-i18n="f1Title">Quick Tip Calculation</h3>
+                <p data-i18n="f1Desc">Enter your bill, pick a tip percentage, and get results instantly. No fuss.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">👥</div>
+                <h3 data-i18n="f2Title">Bill Splitting</h3>
+                <p data-i18n="f2Desc">Split the bill equally or customize amounts per person.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⌚</div>
+                <h3 data-i18n="f3Title">Apple Watch App</h3>
+                <p data-i18n="f3Desc">Calculate tips right from your wrist. Fast and convenient.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📱</div>
+                <h3 data-i18n="f4Title">Home Screen Widget</h3>
+                <p data-i18n="f4Desc">Your last tip calculation, always one glance away on your Home Screen.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <a class="app-store-badge" href="https://apps.apple.com/app/id6739803980" data-i18n-aria="downloadAria" aria-label="Download on the App Store">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+
+        <div class="links-section">
+            <h2 data-i18n="moreInfo">More Information</h2>
+            <ul>
+                <li><a href="support.html" data-i18n="support">Support & FAQ</a></li>
+                <li><a href="privacy-policy.html" data-i18n="privacy">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html" data-i18n="terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tiply: Tip Calculator. <span data-i18n="rights">All rights reserved.</span></p>
+    </footer>
+
+    <script>
+    const translations = {
+        en: {
+            back: "\u2190 Back to Tiply: Tip Calculator",
+            subtitle: "Tip Calculator",
+            tagline: "Calculate tips and split bills in seconds.",
+            featuresTitle: "Features",
+            f1Title: "Quick Tip Calculation",
+            f1Desc: "Enter your bill, pick a tip percentage, and get results instantly. No fuss.",
+            f2Title: "Bill Splitting",
+            f2Desc: "Split the bill equally or customize amounts per person.",
+            f3Title: "Apple Watch App",
+            f3Desc: "Calculate tips right from your wrist. Fast and convenient.",
+            f4Title: "Home Screen Widget",
+            f4Desc: "Your last tip calculation, always one glance away on your Home Screen.",
+            moreInfo: "More Information",
+            support: "Support & FAQ",
+            privacy: "Privacy Policy",
+            terms: "Terms of Service",
+            rights: "All rights reserved."
+        },
+        de: {
+            back: "\u2190 Zurück zu Tiply: Trinkgeldrechner",
+            subtitle: "Trinkgeldrechner",
+            tagline: "Trinkgeld berechnen und Rechnungen teilen – in Sekunden.",
+            featuresTitle: "Funktionen",
+            f1Title: "Schnelle Trinkgeldberechnung",
+            f1Desc: "Rechnung eingeben, Trinkgeld-Prozentsatz wählen und sofort das Ergebnis erhalten.",
+            f2Title: "Rechnung teilen",
+            f2Desc: "Teilen Sie die Rechnung gleichmäßig oder passen Sie Beträge pro Person an.",
+            f3Title: "Apple Watch App",
+            f3Desc: "Berechnen Sie Trinkgeld direkt am Handgelenk. Schnell und praktisch.",
+            f4Title: "Home-Bildschirm-Widget",
+            f4Desc: "Ihre letzte Trinkgeldberechnung immer auf einen Blick auf dem Home-Bildschirm.",
+            moreInfo: "Weitere Informationen",
+            support: "Support & FAQ",
+            privacy: "Datenschutzrichtlinie",
+            terms: "Nutzungsbedingungen",
+            rights: "Alle Rechte vorbehalten."
+        },
+        es: {
+            back: "\u2190 Volver a Tiply: Calculadora de Propinas",
+            subtitle: "Calculadora de Propinas",
+            tagline: "Calcula propinas y divide cuentas en segundos.",
+            featuresTitle: "Funciones",
+            f1Title: "Cálculo rápido de propinas",
+            f1Desc: "Ingresa tu cuenta, elige un porcentaje de propina y obtén el resultado al instante.",
+            f2Title: "División de cuenta",
+            f2Desc: "Divide la cuenta en partes iguales o personaliza el monto por persona.",
+            f3Title: "App para Apple Watch",
+            f3Desc: "Calcula propinas desde tu muñeca. Rápido y conveniente.",
+            f4Title: "Widget de pantalla de inicio",
+            f4Desc: "Tu último cálculo de propina, siempre a la vista en tu pantalla de inicio.",
+            moreInfo: "Más información",
+            support: "Soporte y preguntas frecuentes",
+            privacy: "Política de privacidad",
+            terms: "Términos de servicio",
+            rights: "Todos los derechos reservados."
+        },
+        fr: {
+            back: "\u2190 Retour à Tiply : Calculateur de Pourboire",
+            subtitle: "Calculateur de Pourboire",
+            tagline: "Calculez les pourboires et partagez l'addition en quelques secondes.",
+            featuresTitle: "Fonctionnalités",
+            f1Title: "Calcul rapide du pourboire",
+            f1Desc: "Entrez l'addition, choisissez un pourcentage et obtenez le résultat instantanément.",
+            f2Title: "Partage de l'addition",
+            f2Desc: "Partagez l'addition à parts égales ou personnalisez les montants par personne.",
+            f3Title: "App Apple Watch",
+            f3Desc: "Calculez les pourboires directement depuis votre poignet. Rapide et pratique.",
+            f4Title: "Widget d'écran d'accueil",
+            f4Desc: "Votre dernier calcul de pourboire, toujours visible sur votre écran d'accueil.",
+            moreInfo: "Plus d'informations",
+            support: "Support et FAQ",
+            privacy: "Politique de confidentialité",
+            terms: "Conditions d'utilisation",
+            rights: "Tous droits réservés."
+        },
+        it: {
+            back: "\u2190 Torna a Tiply: Calcolatore di Mance",
+            subtitle: "Calcolatore di Mance",
+            tagline: "Calcola le mance e dividi il conto in pochi secondi.",
+            featuresTitle: "Funzionalità",
+            f1Title: "Calcolo rapido della mancia",
+            f1Desc: "Inserisci il conto, scegli una percentuale di mancia e ottieni il risultato all'istante.",
+            f2Title: "Divisione del conto",
+            f2Desc: "Dividi il conto in parti uguali o personalizza gli importi per persona.",
+            f3Title: "App per Apple Watch",
+            f3Desc: "Calcola le mance direttamente dal polso. Veloce e comodo.",
+            f4Title: "Widget schermata Home",
+            f4Desc: "L'ultimo calcolo della mancia, sempre a portata di sguardo sulla schermata Home.",
+            moreInfo: "Maggiori informazioni",
+            support: "Assistenza e FAQ",
+            privacy: "Informativa sulla privacy",
+            terms: "Termini di servizio",
+            rights: "Tutti i diritti riservati."
+        },
+        ja: {
+            back: "\u2190 Tiply：チップ計算機に戻る",
+            subtitle: "チップ計算機",
+            tagline: "チップの計算と割り勘を数秒で。",
+            featuresTitle: "機能",
+            f1Title: "素早いチップ計算",
+            f1Desc: "金額を入力し、チップの割合を選ぶだけ。結果はすぐに表示されます。",
+            f2Title: "割り勘",
+            f2Desc: "均等に分けるか、一人ずつ金額をカスタマイズできます。",
+            f3Title: "Apple Watchアプリ",
+            f3Desc: "手首からチップを計算。素早く便利です。",
+            f4Title: "ホーム画面ウィジェット",
+            f4Desc: "前回のチップ計算がホーム画面からいつでもすぐに確認できます。",
+            moreInfo: "詳細情報",
+            support: "サポート・よくある質問",
+            privacy: "プライバシーポリシー",
+            terms: "利用規約",
+            rights: "All rights reserved."
+        },
+        ko: {
+            back: "\u2190 Tiply: 팁 계산기로 돌아가기",
+            subtitle: "팁 계산기",
+            tagline: "몇 초 만에 팁을 계산하고 더치페이를 하세요.",
+            featuresTitle: "기능",
+            f1Title: "빠른 팁 계산",
+            f1Desc: "금액을 입력하고 팁 비율을 선택하면 즉시 결과를 확인할 수 있습니다.",
+            f2Title: "더치페이",
+            f2Desc: "균등 분할 또는 인원별 금액을 맞춤 설정할 수 있습니다.",
+            f3Title: "Apple Watch 앱",
+            f3Desc: "손목에서 바로 팁을 계산하세요. 빠르고 편리합니다.",
+            f4Title: "홈 화면 위젯",
+            f4Desc: "마지막 팁 계산을 홈 화면에서 한눈에 확인하세요.",
+            moreInfo: "추가 정보",
+            support: "지원 및 FAQ",
+            privacy: "개인정보 처리방침",
+            terms: "서비스 이용약관",
+            rights: "All rights reserved."
+        },
+        nl: {
+            back: "\u2190 Terug naar Tiply: Fooicalculator",
+            subtitle: "Fooicalculator",
+            tagline: "Bereken fooien en splits rekeningen in enkele seconden.",
+            featuresTitle: "Functies",
+            f1Title: "Snelle fooiberekening",
+            f1Desc: "Voer de rekening in, kies een fooipercentage en zie direct het resultaat.",
+            f2Title: "Rekening splitsen",
+            f2Desc: "Splits de rekening gelijk of pas bedragen per persoon aan.",
+            f3Title: "Apple Watch-app",
+            f3Desc: "Bereken fooien direct vanaf je pols. Snel en handig.",
+            f4Title: "Beginscherm-widget",
+            f4Desc: "Je laatste fooiberekening, altijd zichtbaar op je beginscherm.",
+            moreInfo: "Meer informatie",
+            support: "Ondersteuning & FAQ",
+            privacy: "Privacybeleid",
+            terms: "Gebruiksvoorwaarden",
+            rights: "Alle rechten voorbehouden."
+        },
+        pl: {
+            back: "\u2190 Wróć do Tiply: Kalkulator Napiwków",
+            subtitle: "Kalkulator Napiwków",
+            tagline: "Oblicz napiwek i podziel rachunek w kilka sekund.",
+            featuresTitle: "Funkcje",
+            f1Title: "Szybkie obliczanie napiwku",
+            f1Desc: "Wpisz rachunek, wybierz procent napiwku i natychmiast otrzymaj wynik.",
+            f2Title: "Podział rachunku",
+            f2Desc: "Podziel rachunek równo lub dostosuj kwoty na osobę.",
+            f3Title: "Aplikacja na Apple Watch",
+            f3Desc: "Obliczaj napiwki prosto z nadgarstka. Szybko i wygodnie.",
+            f4Title: "Widget ekranu głównego",
+            f4Desc: "Ostatnie obliczenie napiwku zawsze na wyciągnięcie wzroku na ekranie głównym.",
+            moreInfo: "Więcej informacji",
+            support: "Wsparcie i FAQ",
+            privacy: "Polityka prywatności",
+            terms: "Warunki korzystania",
+            rights: "Wszelkie prawa zastrzeżone."
+        },
+        pt: {
+            back: "\u2190 Voltar para Tiply: Calculadora de Gorjetas",
+            subtitle: "Calculadora de Gorjetas",
+            tagline: "Calcule gorjetas e divida contas em segundos.",
+            featuresTitle: "Funcionalidades",
+            f1Title: "Cálculo rápido de gorjeta",
+            f1Desc: "Insira a conta, escolha a porcentagem de gorjeta e veja o resultado na hora.",
+            f2Title: "Divisão de conta",
+            f2Desc: "Divida a conta igualmente ou personalize os valores por pessoa.",
+            f3Title: "App para Apple Watch",
+            f3Desc: "Calcule gorjetas direto do pulso. Rápido e prático.",
+            f4Title: "Widget da Tela Inicial",
+            f4Desc: "Seu último cálculo de gorjeta, sempre visível na Tela Inicial.",
+            moreInfo: "Mais informações",
+            support: "Suporte e perguntas frequentes",
+            privacy: "Política de Privacidade",
+            terms: "Termos de Serviço",
+            rights: "Todos os direitos reservados."
+        },
+        ro: {
+            back: "\u2190 Înapoi la Tiply: Calculator de Bacșiș",
+            subtitle: "Calculator de Bacșiș",
+            tagline: "Calculează bacșișul și împarte nota de plată în câteva secunde.",
+            featuresTitle: "Funcționalități",
+            f1Title: "Calcul rapid al bacșișului",
+            f1Desc: "Introduceți nota, alegeți procentul de bacșiș și obțineți rezultatul instant.",
+            f2Title: "Împărțirea notei",
+            f2Desc: "Împărțiți nota în mod egal sau personalizați sumele per persoană.",
+            f3Title: "Aplicație Apple Watch",
+            f3Desc: "Calculați bacșișul direct de la încheietură. Rapid și convenabil.",
+            f4Title: "Widget ecran principal",
+            f4Desc: "Ultimul calcul de bacșiș, mereu vizibil pe ecranul principal.",
+            moreInfo: "Mai multe informații",
+            support: "Asistență și întrebări frecvente",
+            privacy: "Politica de confidențialitate",
+            terms: "Termeni și condiții",
+            rights: "Toate drepturile rezervate."
+        },
+        th: {
+            back: "\u2190 กลับไปที่ Tiply: เครื่องคิดทิป",
+            subtitle: "เครื่องคิดทิป",
+            tagline: "คำนวณทิปและแบ่งบิลได้ในไม่กี่วินาที",
+            featuresTitle: "คุณสมบัติ",
+            f1Title: "คำนวณทิปอย่างรวดเร็ว",
+            f1Desc: "ใส่ยอดบิล เลือกเปอร์เซ็นต์ทิป แล้วดูผลลัพธ์ทันที",
+            f2Title: "แบ่งบิล",
+            f2Desc: "แบ่งบิลเท่า ๆ กันหรือปรับจำนวนเงินต่อคนได้",
+            f3Title: "แอป Apple Watch",
+            f3Desc: "คำนวณทิปได้จากข้อมือ สะดวกและรวดเร็ว",
+            f4Title: "วิดเจ็ตหน้าจอหลัก",
+            f4Desc: "การคำนวณทิปล่าสุดของคุณ พร้อมให้ดูได้ทันทีบนหน้าจอหลัก",
+            moreInfo: "ข้อมูลเพิ่มเติม",
+            support: "การสนับสนุนและคำถามที่พบบ่อย",
+            privacy: "นโยบายความเป็นส่วนตัว",
+            terms: "ข้อกำหนดการใช้งาน",
+            rights: "สงวนลิขสิทธิ์"
+        },
+        tr: {
+            back: "\u2190 Tiply: Bahşiş Hesaplayıcı'ya Dön",
+            subtitle: "Bahşiş Hesaplayıcı",
+            tagline: "Bahşiş hesaplayın ve hesabı saniyeler içinde bölün.",
+            featuresTitle: "Özellikler",
+            f1Title: "Hızlı bahşiş hesaplama",
+            f1Desc: "Hesabı girin, bahşiş yüzdesini seçin ve sonucu anında görün.",
+            f2Title: "Hesap bölme",
+            f2Desc: "Hesabı eşit bölün veya kişi başına tutarları özelleştirin.",
+            f3Title: "Apple Watch Uygulaması",
+            f3Desc: "Bileğinizden bahşiş hesaplayın. Hızlı ve kullanışlı.",
+            f4Title: "Ana Ekran Widget'ı",
+            f4Desc: "Son bahşiş hesaplamanız, her zaman Ana Ekranınızda bir bakışta görünür.",
+            moreInfo: "Daha fazla bilgi",
+            support: "Destek ve SSS",
+            privacy: "Gizlilik Politikası",
+            terms: "Kullanım Koşulları",
+            rights: "Tüm hakları saklıdır."
+        },
+        uk: {
+            back: "\u2190 Назад до Tiply: Калькулятор Чайових",
+            subtitle: "Калькулятор Чайових",
+            tagline: "Розрахуйте чайові та розділіть рахунок за лічені секунди.",
+            featuresTitle: "Функції",
+            f1Title: "Швидкий розрахунок чайових",
+            f1Desc: "Введіть рахунок, оберіть відсоток чайових і миттєво отримайте результат.",
+            f2Title: "Розподіл рахунку",
+            f2Desc: "Розділіть рахунок порівну або налаштуйте суму на кожну особу.",
+            f3Title: "Застосунок для Apple Watch",
+            f3Desc: "Розраховуйте чайові прямо з зап'ястка. Швидко та зручно.",
+            f4Title: "Віджет головного екрана",
+            f4Desc: "Останній розрахунок чайових завжди на виду на головному екрані.",
+            moreInfo: "Додаткова інформація",
+            support: "Підтримка та FAQ",
+            privacy: "Політика конфіденційності",
+            terms: "Умови використання",
+            rights: "Усі права захищено."
+        },
+        vi: {
+            back: "\u2190 Quay lại Tiply: Máy tính Tiền tip",
+            subtitle: "Máy tính Tiền tip",
+            tagline: "Tính tiền tip và chia hóa đơn chỉ trong vài giây.",
+            featuresTitle: "Tính năng",
+            f1Title: "Tính tip nhanh chóng",
+            f1Desc: "Nhập hóa đơn, chọn phần trăm tip và nhận kết quả ngay lập tức.",
+            f2Title: "Chia hóa đơn",
+            f2Desc: "Chia đều hóa đơn hoặc tùy chỉnh số tiền cho từng người.",
+            f3Title: "Ứng dụng Apple Watch",
+            f3Desc: "Tính tiền tip ngay trên cổ tay. Nhanh chóng và tiện lợi.",
+            f4Title: "Widget Màn hình chính",
+            f4Desc: "Phép tính tiền tip gần nhất, luôn hiển thị trên Màn hình chính của bạn.",
+            moreInfo: "Thông tin thêm",
+            support: "Hỗ trợ & Câu hỏi thường gặp",
+            privacy: "Chính sách Bảo mật",
+            terms: "Điều khoản Dịch vụ",
+            rights: "Đã đăng ký bản quyền."
+        }
+    };
+
+    function applyLanguage(lang) {
+        const t = translations[lang] || translations.en;
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+            const key = el.getAttribute("data-i18n");
+            if (t[key]) el.textContent = t[key];
+        });
+        document.documentElement.lang = lang;
+    }
+
+    (function() {
+        const browserLang = (navigator.language || "en").split("-")[0];
+        const lang = translations[browserLang] ? browserLang : "en";
+        const select = document.getElementById("lang-select");
+        select.value = lang;
+        applyLanguage(lang);
+        select.addEventListener("change", function() {
+            applyLanguage(this.value);
+        });
+    })();
+    </script>
+</body>
+</html>
